@@ -1,0 +1,13 @@
+#+title: Download Lidar
+
+
+* Data source
+https://ftp.ssec.wisc.edu/pub/wisconsinview/lidar/Dane/Dane_2017_3DEP_Delivery/Classified_LAS/
+
+* Dowload with wget
+
+#+begin_src sh
+
+
+
+#+end_src
