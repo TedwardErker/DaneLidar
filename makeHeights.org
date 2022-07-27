@@ -1,0 +1,18 @@
+#+title: Make Heights
+#+PROPERTY: header-args:R :session *RmakeHeights*
+
+#+begin_src R
+
+    dir <- "/media/erker/data_erker/Grad School/Grad School Data/madison_lidar/dane_lidar_2017/ftp.ssec.wisc.edu/pub/wisconsinview/lidar/Dane/Dane_2017_3DEP_Delivery/Classified_LAS/USGS/"
+
+    head(list.files(dir))
+
+#+end_src
+
+#+RESULTS:
+| 0001_usgs.las |
+| 0002_usgs.las |
+| 0003_usgs.las |
+| 0004_usgs.las |
+| 0005_usgs.las |
+| 0006_usgs.las |

@@ -1,0 +1,45 @@
+#+title: Create Lax
+
+.lax files provide spatial indexing which greatly speeds up processing of .las files.
+
+Explanation is here:
+
+https://r-lidar.github.io/lidRbook/spatial-indexing.html#spatial-indexing-files
+
+#+begin_quote
+By adding .lax files along with your .las/.laz files it is possible to make fast 2D queries without reading the whole file. The best way to create a .lax file is to use laxindex from LAStools. It is a free and open-source part of LAStools. If you cannot or do not want to use LAStools the rlas package has a function to creates lax files but lasindex should be preferred.
+
+
+rlas::writelax("file.las")
+#+end_quote
+
+
+To create .lax files, I downloaded LAStools from here:
+
+https://rapidlasso.com/lastools/
+
+I expanded the .zip in a directory ~/src
+
+The readme says you need to build tool for linux.
+#+begin_quote
+All open source tools can be compiled from the source code. For MSVC6.0 there is a project file. For Linux and MacOS the makefiles are included. Simply go into the root directory and run 'make':
+
+unzip LAStools.zip
+cd LAStools/
+make
+
+The compiled binary executables are or will be in the ./LAStools/bin directory.
+
+#+end_quote
+
+#+begin_src sh
+cd ~/src/LAStools
+make
+#+end_src
+
+
+Create LAX files
+#+begin_src sh :session b
+cd /media/erker/ella/DaneLidar/ftp.ssec.wisc.edu/pub/wisconsinview/lidar/Dane/Dane_2017_3DEP_Delivery/Classified_LAS/USGS
+/home/erker/src/LAStools/bin/lasindex -i *.las
+#+end_src

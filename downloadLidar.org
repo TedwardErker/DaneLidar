@@ -2,12 +2,11 @@
 
 
 * Data source
-https://ftp.ssec.wisc.edu/pub/wisconsinview/lidar/Dane/Dane_2017_3DEP_Delivery/Classified_LAS/
+https://ftp.ssec.wisc.edu/pub/wisconsinview/lidar/Dane/Dane_2017_3DEP_Delivery/Classified_LAS/USGS/
 
 * Dowload with wget
+#+BEGIN_SRC sh :session *danelidar*
+wget -r  https://ftp.ssec.wisc.edu/pub/wisconsinview/lidar/Dane/Dane_2017_3DEP_Delivery/Classified_LAS/USGS/ -P ~/Downloads/
+#+END_SRC
 
-#+begin_src sh
-
-
-
-#+end_src
+Right now the destination is set to ~/Downloads/.  I saved them elsewhere.
